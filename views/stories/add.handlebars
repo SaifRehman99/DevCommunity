@@ -1,0 +1,35 @@
+<h1>Add stories</h1>
+<form action="/stories" method="POST">
+  <div class="row">
+    <div class="input-field col s6">
+      <input type="text" class="validate" name="title">
+      <label>Title</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s6">
+      <select name="status">
+        <option value="Public" selected>Public</option>
+        <option value="Private">Private</option>
+        <option value="Unpublished">Unpublished</option>
+      </select>
+      <label>Status</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s6">
+      <label>
+        <input type="checkbox" class="filled-in" checked name="allowcomments" />
+        <span>Allow Comments</span>
+      </label> </div>
+  </div>
+  <div class="row">
+
+    <div class="input-field col s6">
+      <textarea id="textarea2" name="editor1"></textarea>
+      <button class="btn waves-effect waves-light black" type="submit">Save
+        <i class="material-icons right">send</i>
+      </button>
+    </div>
+
+</form>

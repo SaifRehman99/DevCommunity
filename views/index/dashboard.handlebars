@@ -1,0 +1,28 @@
+<h1>Welcome {{user.firstName}}</h1>
+{{#if stories}}
+<table class="striped">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Status</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {{#each stories}}
+    <tr>
+
+      <td><a href="/stories/single/{{id}}">{{title}}</a></td>
+      <td>{{status}}</td>
+      <td>{{formateDate date "YYYY do MMMM"}}</td>
+      <td><a href="/stories/edit/{{id}}" class="btn blue">Edit</a> <a class="btn red delete" data-id="{{id}}">Delete</a>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+{{else}}
+<p>No stories to show man</p>
+{{/if}}
